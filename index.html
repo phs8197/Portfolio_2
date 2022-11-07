@@ -19,7 +19,9 @@
   <body>
     <div id="main">
       <header id="header">
-        <div class="logo"><a href="index.html">로고입니다</a></div>
+        <div class="logo">
+          <a href="index.html">HellO</a>
+        </div>
         <div class="hamburger">
           <div></div>
           <div></div>
@@ -29,16 +31,28 @@
       <canvas id="canvas"></canvas>
       <div class="section">
         <desc>
-          Hi, My Name is <strong>HyunSoo!</strong><br />
-          어떤 일이라도 노력하고 <i>🥰</i> 즐기면 그 결과는 <br />
-          빛을 바란다고 생각합니다. 신입의 <strong>열정</strong>과 <br />
-          <strong>도전정신</strong>을 깊숙히 새기며 배움에
-          <i>🤗</i> 있어<br />겸손함을 <i>🦁</i> 유지하며 세부적인 곳까지 <br />
-          파고드는 <em>개발자</em>가 되겠습니다.
+          <span class="first-line"
+            >Hi, My Name is <strong>HyunSoo!</strong><br />
+          </span>
+          <span class="second-line">
+            어떤 일이라도 노력하고 <b>🥰</b> 즐기면 그 결과는 <br />
+            빛을 <b>🌈</b> 바란다고 생각합니다.</span
+          >
+          <span class="third-line"
+            >신입의 <strong>열정</strong>과 <br />
+            <strong>도전정신</strong>을 깊숙히 새기며 배움에
+            <b>🤗</b> 있어</span
+          ><br />
+          <span class="fourth-line"
+            >겸손함을 <b>🦁</b> 유지하며 세부적인 곳까지 <br />
+            파고드는 <em>개발자</em>가 되겠습니다. 👉</span
+          >
         </desc>
       </div>
+      <div class="highfive">✋</div>
+      <!-- <div class="hand"></div> -->
+      <span class="text">Highfive / Highfive / Hi</span>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
@@ -59,47 +73,78 @@
         });
       });
 
-      gsap.set(".section desc", { opacity: 0, y: 50 });
-      gsap.set(".section desc strong", { opacity: 0, x: 250 }); // 열정, 도전정신
+      gsap.set(".section desc span", { opacity: 0, y: 50 });
+      gsap.set(".section desc strong", { opacity: 0, x: 250 }); // hyunsoo, 열정, 도전정신
       gsap.set(".section desc em", { opacity: 0, x: 250 }); // 개발자
-      gsap.set(".section desc i", { opacity: 0, y: 250 }); // 이모티콘들
+      gsap.set(".section desc b", { opacity: 0, y: 250 }); // 이모티콘들
       gsap.set("#header", { opacity: 0, top: -100 }); // 맨 위에서 내려오게
 
       setTimeout(() => {
-        gsap.to(".section desc", {
+        gsap.to(".section desc .first-line", {
           opacity: 1,
           duration: 0.4,
           stagger: 0.6,
           y: 0,
         });
-        gsap.to(".section desc strong:first-child", {
+        gsap.to(".section desc .first-line strong:first-child", {
           opacity: 1,
           duration: 0.4,
           x: 0,
           delay: 1,
         });
-        gsap.to(".section desc i", {
+        gsap.to(".section desc .second-line", {
           opacity: 1,
           duration: 0.4,
-          x: 0,
+          stagger: 0.6,
+          y: 0,
           delay: 2,
         });
-
-        gsap.to(".section desc strong", {
+        gsap.to(".section desc .second-line b", {
           opacity: 1,
           duration: 0.4,
           y: 0,
-          ease: "bounce.out",
           delay: 3,
+        });
+        gsap.to(".section desc .third-line", {
+          opacity: 1,
+          duration: 0.4,
+          stagger: 0.6,
+          y: 0,
+          delay: 4,
+        });
+        gsap.to(".section desc .third-line strong", {
+          opacity: 1,
+          duration: 0.4,
+          x: 0,
+          delay: 4,
+        });
+        gsap.to(".section desc .third-line b", {
+          opacity: 1,
+          duration: 0.4,
+          y: 0,
+          delay: 5,
+        });
+        gsap.to(".section desc .fourth-line", {
+          opacity: 1,
+          duration: 0.4,
+          stagger: 0.6,
+          y: 0,
+          delay: 6,
+        });
+        gsap.to(".section desc .fourth-line b", {
+          opacity: 1,
+          duration: 0.4,
+          y: 0,
+          delay: 6,
         });
         gsap.to(".section desc em", {
           opacity: 1,
           duration: 0.4,
           y: 0,
           ease: "bounce.out",
-          delay: 4,
+          delay: 7,
         });
-        gsap.to("#header", { opacity: 1, top: 0, duration: 0.4, delay: 5 });
+        gsap.to("#header", { opacity: 1, top: 0, duration: 0.4, delay: 7.5 });
       }, 1000);
     </script>
     <script type="x-shader/x-vertex" id="vertCode">
