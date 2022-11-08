@@ -20,7 +20,7 @@
   z-index: 10;
 }
 #header .logo {
-  font-size: 1.5em;
+  font-size: 30px;
   font-weight: 600;
 }
 #header .hamburger {
@@ -59,33 +59,67 @@
   font-weight: 200;
 }
 .section desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .section desc span {
   width: 20px;
   height: 20px;
 }
+/* Typing-animation */
+.first-line {
+  width: 76%;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  font-family: GmarketSans, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 /* highfive */
 .highfive {
   position: absolute;
-  width: 10%;
+  width: 11%;
   aspect-ratio: 1/1;
   background-color: #853fb4;
   border-radius: 50%;
-  left: 83%;
-  top: 71.5%;
+  left: 84%;
+  top: 65%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
 }
 
-.badge__svg {
-  color: white;
+.finger {
+  font-size: 32px;
+}
+
+textPath {
+  font-size: 6px;
+  fill: white;
+  letter-spacing: 2.5px;
+  font-family: GmarketSans, Arial, Helvetica, sans-serif;
+  font-weight: 400;
   animation: animate 30s linear infinite;
   transition: all ease-out 0.25s;
 }
+
 @keyframes animate {
   from {
     transform: rotateZ(360deg);
@@ -94,13 +128,7 @@
     transform: rotateZ(0deg);
   }
 }
-textPath {
-  font-size: 10px;
-  fill: white;
-  letter-spacing: 5px;
-  font-family: GmarketSans, Arial, Helvetica, sans-serif;
-  font-weight: 300;
-}
+
 .badge__text {
   color: #fff;
 }
@@ -120,4 +148,52 @@ textPath {
   line-height: 1;
   background: url("../image/hands_sheet.png 0 0/auto 6.1rem no-repeat");
   will-change: transform;
+}
+
+.bounce {
+  animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.hithere {
+  animation: hithere 1s ease-in-out;
+}
+@keyframes hithere {
+  30% {
+    transform: scale(1.2);
+  }
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(20deg) scale(1.2);
+  }
+  70% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

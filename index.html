@@ -31,26 +31,25 @@
       <canvas id="canvas"></canvas>
       <div class="section">
         <desc>
-          <span class="first-line"
-            >Hi, My Name is <strong>HyunSoo!</strong><br />
-          </span>
-          <span class="second-line">
-            어떤 일이라도 노력하고 <b>🥰</b> 즐기면 그 결과는 <br />
-            빛을 <b>🌈</b> 바란다고 생각합니다.</span
-          >
-          <span class="third-line"
-            >신입의 <strong>열정</strong>과 <br />
-            <strong>도전정신</strong>을 깊숙히 새기며 배움에
-            <b>🤗</b> 있어</span
-          ><br />
-          <span class="fourth-line"
-            >겸손함을 <b>🦁</b> 유지하며 세부적인 곳까지 <br />
-            파고드는 <em>개발자</em>가 되겠습니다. 👉</span
-          >
+          <div class="first-line">
+            Hi, My Name is <strong> HyunSoo.</strong>
+          </div>
+          <div class="second-line">
+            어떤 일이라도 노력하고 <b>🥰</b> 즐기면 <br />그 결과는 빛을
+            <b>🌈</b> 바란다고 생각합니다.
+          </div>
+          <div class="third-line">
+            신입의 <strong>열정</strong>과 <strong>도전정신</strong>을 깊숙히
+            새기며 <br />
+            배움에 <b>🤗</b> 있어 겸손함을 <b>🦁</b> 유지하며
+          </div>
+          <div class="fourth-line">
+            지속성장하는 <em>개발자</em>가 되겠습니다.
+          </div>
         </desc>
       </div>
       <div class="textcircle">
-        <div class="highfive">
+        <div class="highfive bounce">
           <svg class="badge__svg" width="170" viewBox="0 0 100 100">
             <defs>
               <path
@@ -72,13 +71,23 @@
               stroke="#fff"
               stroke-width=".5"
               stroke-dasharray="1 3"
+            ></circle>
+            <text
+              class="finger"
+              style="transform-origin: center"
+              x="50%"
+              y="50%"
+              text-anchor="middle"
+              stroke="#51c5cf"
+              stroke-width="2px"
+              dy=".3em"
             >
               👆
-            </circle>
+            </text>
 
             <text class="badge__text">
               <textPath href="#circlePath">
-                High Five/ High Five/ High Five/ High Five/ High Five/
+                HIGH FIVE/ HIVE FIVE/ HIVE FIVE/ HIVE FIVE/ HIVE FIVE/
               </textPath>
             </text>
           </svg>
@@ -118,25 +127,28 @@
         });
       });
 
-      gsap.set(".section desc span", { opacity: 0, y: 50 });
-      gsap.set(".section desc strong", { opacity: 0, x: 250 }); // hyunsoo, 열정, 도전정신
+      gsap.set(".section desc div:not(.first-line)", { opacity: 0, y: 50 });
+      gsap.set(".section desc strong:not(.first-line strong)", {
+        opacity: 0,
+        x: 250,
+      }); // hyunsoo, 열정, 도전정신
       gsap.set(".section desc em", { opacity: 0, x: 250 }); // 개발자
       gsap.set(".section desc b", { opacity: 0, y: 250 }); // 이모티콘들
       gsap.set("#header", { opacity: 0, top: -100 }); // 맨 위에서 내려오게
 
       setTimeout(() => {
-        gsap.to(".section desc .first-line", {
-          opacity: 1,
-          duration: 0.4,
-          stagger: 0.6,
-          y: 0,
-        });
-        gsap.to(".section desc .first-line strong:first-child", {
-          opacity: 1,
-          duration: 0.4,
-          x: 0,
-          delay: 1,
-        });
+        // gsap.to(".section desc .first-line", {
+        //   opacity: 1,
+        //   duration: 0.4,
+        //   stagger: 0.6,
+        //   y: 0,
+        // });
+        // gsap.to(".section desc .first-line strong:first-child", {
+        //   opacity: 1,
+        //   duration: 0.4,
+        //   x: 0,
+        //   delay: 1,
+        // });
         gsap.to(".section desc .second-line", {
           opacity: 1,
           duration: 0.4,

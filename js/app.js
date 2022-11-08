@@ -1,4 +1,4 @@
-const circle = document.querySelector("circle");
+const circle = document.querySelector(".finger");
 const highfive = document.querySelector(".highfive");
 
 function movingHand(event) {
@@ -20,8 +20,25 @@ function movingHand(event) {
   circle.style.transform = `rotateZ(${Theta}rad)`;
   console.log(Theta);
 }
-window.addEventListener("mousemove", movingHand);
 
+function mouseover(event) {
+  circle.innerHTML = "✋";
+  document.body.style.cursor = "pointer";
+  highfive.classList.remove("bounce");
+}
+function mouseleave(event) {
+  circle.innerHTML = "👆";
+  document.body.style.cursor = "default";
+}
+function mouseclick(event) {
+  circle.innerHTML = "🖐";
+  highfive.classList.add("hithere");
+}
+window.addEventListener("mousemove", movingHand);
+highfive.addEventListener("mouseover", mouseover);
+highfive.addEventListener("mouseleave", mouseleave);
+highfive.addEventListener("mousedown", mouseclick);
+highfive.addEventListener("dbclick", mouseclick);
 // x,y 가져오기 mouseX, mouseY
 // 손의 중앙 위치 가져오기 handX handY -> 완료
 // 위를 봤을때의 벡터 값 왜 정행 (0, -1) = v1
