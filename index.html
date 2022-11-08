@@ -49,9 +49,54 @@
           >
         </desc>
       </div>
-      <div class="highfive">✋</div>
+      <div class="textcircle">
+        <div class="highfive">
+          <svg class="badge__svg" width="170" viewBox="0 0 100 100">
+            <defs>
+              <path
+                id="circlePath"
+                d="M6,50a44,44 0 1,0 88,0a44,44 0 1,0 -88,0"
+                fill="none"
+                stroke="#fff"
+                stroke-dasharray="1 5"
+              ></path>
+            </defs>
+
+            <circle
+              style="transform-origin: center"
+              opacity=".9"
+              fill="none"
+              cx="50"
+              cy="50"
+              r="32"
+              stroke="#fff"
+              stroke-width=".5"
+              stroke-dasharray="1 3"
+            >
+              👆
+            </circle>
+
+            <text class="badge__text">
+              <textPath href="#circlePath">
+                High Five/ High Five/ High Five/ High Five/ High Five/
+              </textPath>
+            </text>
+          </svg>
+          <div
+            class="badge__icon"
+            style="transform: translate3d(0px, 0px, 0px)"
+          >
+            <div
+              class="badge__emoji"
+              data-step="1"
+              style="transform: translate3d(0px, 0px, 0px) rotate(81.1452deg)"
+            ></div>
+          </div>
+          <!-- <span class="text">Highfive / Highfive / Hi</span> -->
+        </div>
+      </div>
+
       <!-- <div class="hand"></div> -->
-      <span class="text">Highfive / Highfive / Hi</span>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
@@ -97,54 +142,54 @@
           duration: 0.4,
           stagger: 0.6,
           y: 0,
-          delay: 2,
+          delay: 1.5,
         });
         gsap.to(".section desc .second-line b", {
           opacity: 1,
           duration: 0.4,
           y: 0,
-          delay: 3,
+          delay: 1.5,
         });
         gsap.to(".section desc .third-line", {
           opacity: 1,
           duration: 0.4,
           stagger: 0.6,
           y: 0,
-          delay: 4,
+          delay: 2.5,
         });
         gsap.to(".section desc .third-line strong", {
           opacity: 1,
           duration: 0.4,
           x: 0,
-          delay: 4,
+          delay: 2.5,
         });
         gsap.to(".section desc .third-line b", {
           opacity: 1,
           duration: 0.4,
           y: 0,
-          delay: 5,
+          delay: 3.5,
         });
         gsap.to(".section desc .fourth-line", {
           opacity: 1,
           duration: 0.4,
           stagger: 0.6,
           y: 0,
-          delay: 6,
+          delay: 4.5,
         });
         gsap.to(".section desc .fourth-line b", {
           opacity: 1,
           duration: 0.4,
           y: 0,
-          delay: 6,
+          delay: 4.5,
         });
         gsap.to(".section desc em", {
           opacity: 1,
           duration: 0.4,
           y: 0,
           ease: "bounce.out",
-          delay: 7,
+          delay: 5,
         });
-        gsap.to("#header", { opacity: 1, top: 0, duration: 0.4, delay: 7.5 });
+        gsap.to("#header", { opacity: 1, top: 0, duration: 0.4, delay: 5.5 });
       }, 1000);
     </script>
     <script type="x-shader/x-vertex" id="vertCode">
