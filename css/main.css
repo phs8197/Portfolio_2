@@ -50,7 +50,7 @@
   margin-top: 2%;
 }
 
-#main .section strong:first-child {
+#main .section .first-line strong:first-child {
   color: #853fb4;
 }
 #main .section em:last-child {
@@ -78,43 +78,46 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 5vw;
+  font-size: 14px;
 }
-/* .hand {
-  position: absolute;
-  left: 86%;
-  top: 74%;
-  font-size: 5vw;
-  text-align: center;
-  z-index: 2;
-} */
-.text {
-  left: 84%;
-  top: 77.5%;
-  color: #fff;
-  position: absolute;
-  user-select: none;
-  pointer-events: none;
+
+.badge__svg {
+  color: white;
   animation: animate 30s linear infinite;
   transition: all ease-out 0.25s;
-  font-family: sans-serif;
-  font-weight: 300;
 }
-
-.text2 {
-  left: 83%;
-  top: 73%;
-  display: inline-block;
-  position: absolute;
-  text-transform: uppercase;
-  transform-origin: 0 100px;
-}
-
 @keyframes animate {
   from {
-    transform: rotate(360deg);
+    transform: rotateZ(360deg);
   }
   to {
-    transform: rotate(0deg);
+    transform: rotateZ(0deg);
   }
+}
+textPath {
+  font-size: 10px;
+  fill: white;
+  letter-spacing: 5px;
+  font-family: GmarketSans, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+.badge__text {
+  color: #fff;
+}
+.badge__icon {
+  transform: translate3d(0px, 0px, 0px);
+}
+.badge__emoji {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 5.3rem;
+  line-height: 1;
+  background: url("../image/hands_sheet.png 0 0/auto 6.1rem no-repeat");
+  will-change: transform;
 }
