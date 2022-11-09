@@ -94,12 +94,12 @@
 /* highfive */
 .highfive {
   position: absolute;
-  width: 11%;
+  width: 10%;
   aspect-ratio: 1/1;
   background-color: #853fb4;
   border-radius: 50%;
   left: 84%;
-  top: 65%;
+  top: 67%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,17 +112,17 @@
 
 textPath {
   font-size: 6px;
-  fill: white;
   letter-spacing: 2.5px;
   font-family: GmarketSans, Arial, Helvetica, sans-serif;
   font-weight: 400;
   animation: animate 30s linear infinite;
   transition: all ease-out 0.25s;
+  fill: #fff;
 }
 
 @keyframes animate {
   from {
-    transform: rotateZ(360deg);
+    transform: rotateZ(180deg);
   }
   to {
     transform: rotateZ(0deg);
@@ -146,7 +146,6 @@ textPath {
   left: 0;
   font-size: 5.3rem;
   line-height: 1;
-  background: url("../image/hands_sheet.png 0 0/auto 6.1rem no-repeat");
   will-change: transform;
 }
 
@@ -179,16 +178,17 @@ textPath {
 .hithere {
   animation: hithere 1s ease-in-out;
 }
+
 @keyframes hithere {
   30% {
     transform: scale(1.2);
   }
   40%,
   60% {
-    transform: rotate(-20deg) scale(1.2);
+    transform: rotate(-30deg) scale(1.2);
   }
   50% {
-    transform: rotate(20deg) scale(1.2);
+    transform: rotate(30deg) scale(1.2);
   }
   70% {
     transform: rotate(0deg) scale(1.2);

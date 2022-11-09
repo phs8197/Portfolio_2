@@ -33,12 +33,19 @@ function mouseleave(event) {
 function mouseclick(event) {
   circle.innerHTML = "🖐";
   highfive.classList.add("hithere");
+  console.log(event);
+  setTimeout(() => {
+    highfive.classList.remove("hithere");
+    circle.innerHTML = "✋";
+  }, 1000);
 }
+
 window.addEventListener("mousemove", movingHand);
-highfive.addEventListener("mouseover", mouseover);
+highfive.addEventListener("mousemove", mouseover);
 highfive.addEventListener("mouseleave", mouseleave);
 highfive.addEventListener("mousedown", mouseclick);
 highfive.addEventListener("dbclick", mouseclick);
+highfive.addEventListener(" click", mouseclick);
 // x,y 가져오기 mouseX, mouseY
 // 손의 중앙 위치 가져오기 handX handY -> 완료
 // 위를 봤을때의 벡터 값 왜 정행 (0, -1) = v1
