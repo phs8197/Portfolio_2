@@ -20,7 +20,7 @@
   color: #0e2a93;
   background: #ffe9e9;
   display: flex;
-  height: 800px;
+  height: 900px;
   flex-direction: column;
   font-size: 4vw;
   line-height: 160%;
@@ -110,7 +110,6 @@ section {
 }
 
 #boxes div {
-  counter-increment: number;
   width: 23.5vw;
   aspect-ratio: 1/1;
   min-width: 5em;
@@ -120,17 +119,46 @@ section {
   border: 0 solid transparent;
   box-sizing: border-box;
   border-radius: 50%;
-  opacity: 0.7;
-
+  opacity: 0.8;
   --dx: calc(var(--size) - var(--x));
   --dy: calc(var(--size) - var(--y));
 }
+#boxes div:first-child {
+  border-radius: 50% 5% 50% 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+}
 
-/* .container:not([style]) #boxes div:first-child {
+#boxes div:nth-child(2) {
+  background: url("../image/IMG_6416.JPG") no-repeat center;
+  background-size: cover;
+  opacity: 1;
+}
+#boxes div:nth-child(3) {
+  border-radius: 20px 50% 50% 20px;
+}
+#boxes div:nth-child(4) {
+  background: url("../image/IMG_0312.JPG") no-repeat center;
+  background-size: cover;
+  opacity: 1;
+}
+#boxes div:last-child {
+  background: url("../image/IMG_5728.jpeg") no-repeat center;
+  background-size: cover;
+  opacity: 1;
+}
+#boxes div:nth-child(5) {
+  border-radius: 60px;
+}
+#boxes div:first-child {
   --x: 84;
   --y: 75;
   --size: 128;
-} */
+}
 
 #boxes div:hover {
   opacity: 1;
@@ -143,17 +171,30 @@ section {
     calc(var(--y) / var(--size) * 100%) calc(var(--dy) / var(--size) * 100%)
     calc(var(--dy) / var(--size) * 100%);
 }
-
 #boxes div:after {
-  content: counter(number);
+  content: "";
+  width: 500px;
+  height: 500px;
   color: rgba(255, 255, 255, 0);
   font-size: calc(1vw + 1.2em);
   font-weight: 200;
   transition: all 0.2s ease;
   transition-delay: 0.1s;
   transform: translate3d(0, -0.5em, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
 }
-
+/* #boxes div:first-child:after {
+  content: "열정";
+} */
+#boxes div:nth-child(3):after {
+  content: "도전정신";
+}
+#boxes div:nth-child(5):after {
+  content: "긍정적인";
+}
 #boxes div:hover:after {
   color: rgba(255, 255, 255, 0.7);
   transform: translate3d(0, 0, 0);
