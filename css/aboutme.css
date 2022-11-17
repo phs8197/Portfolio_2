@@ -276,7 +276,9 @@ section {
   --size: 128;
 }
 
-#boxes div:hover {
+#boxes div:first-child:hover,
+#boxes div:nth-child(3):hover,
+#boxes div:nth-child(5):hover {
   opacity: 1;
   font-weight: 500;
   cursor: pointer;
@@ -289,7 +291,9 @@ section {
     calc(var(--dy) / var(--size) * 100%);
 }
 
-#boxes div:after {
+#boxes div:first-child:after,
+#boxes div:nth-child(3):after,
+#boxes div:nth-child(5):after {
   content: "";
   color: rgba(255, 255, 255, 0);
   /* font-size: calc(1vw + 1.1em); */
@@ -307,10 +311,76 @@ section {
   color: rgba(255, 255, 255, 0.7);
   transform: translate3d(0, 0, 0);
 }
+.shape_moving {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 3s ease-in-out infinite;
+  transition: all 2s ease-in-out;
+  z-index: 5;
+}
+/* .shape_moving:first-child {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 3s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+  z-index: 5;
+}
+.shape_moving:nth-child(2) {
+  border-radius: 20% 70% 80% 30% / 30% 70% 40% 50%;
+  animation: morph2 3s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+  z-index: 5;
+}
+.shape_moving:nth-child(3) {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph3 3s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+  z-index: 5;
+} */
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  75% {
+    border-radius: 40% 80% 50% 30% / 40% 80% 50% 70%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+/* @keyframes morph2 {
+  0% {
+    border-radius: 20% 70% 80% 30% / 30% 70% 40% 50%;
+  }
+
+  50% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  100% {
+    border-radius: 20% 70% 80% 30% / 30% 70% 40% 50%;
+  }
+}
+
+@keyframes morph3 {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+} */
 
 .like_container {
   position: absolute;
-  top: 69%;
+  top: 72%;
   left: 81%;
 }
 .instagram-like {
