@@ -72,5 +72,6 @@ let timer = setInterval(() => {
       spanCount.classList.remove("animate-count");
       spanHeart.classList.remove("animate-beat");
     }, 500);
+    
   }
 }, 600);
