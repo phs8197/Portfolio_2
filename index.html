@@ -106,38 +106,108 @@
     </div>
     <!-- aboutme -->
     <div id="aboutme">
-
-      <div class="section2">
-        <div>만나서 반갑습니다! 🥰</div>
-      </div>
+      <div class="title">만나서 반갑습니다! 🥰</div>
       <div class="section3">
-          <p>
-            <div>저는 사람들과 <em class="underline">소통하는 것을 좋아하고,</em></div>
-            <div>주어진 <em class="circle">상황</em>을 차분히<em
-              ><img src="image/IMG_7356.JPG" class="img1" width="40px"center/></em
-            ><em class="highlight">인지</em>하고,</div>
-            <div> <em>현실적으로</em
-            ><em><img src="image/IMG_4224.JPG" class="img2" width="40px"center/></em>해결해 가는
-            편입니다.</div>
-            <div>자기 객관화 하는 것을 좋아하며,</div>
-            <div><em class="highlight">긍정적인</em> <em>편입니다</em
-            ><img src="image/IMG_5717.jpeg" class="img3" width="40px"center/></div>
-          </p>
+        <div class="contents">
+          <div>
+            저는 사람들과
+            <em class="underline"
+              >소통하는 것을 좋아하고,<span class="underline2 line"></span
+            ></em>
+          </div>
+          <div>
+            주어진
+            <em class="circle_container"
+              >상황
+              <svg height="120" width="120">
+                <circle
+                  class="circle circle3"
+                  cx="72"
+                  cy="72"
+                  r="36"
+                  stroke="#ffb1b3"
+                  stroke-width="3"
+                  fill-opacity="0"
+                />
+              </svg>
+            </em>
+
+            을 차분히<em
+              ><img src="image/IMG_7356.JPG" class="img1" width="40px" center
+            /></em>
+            <em class="highlight bgline">인지</em>하고,
+          </div>
+          <div>
+            <em>현실적으로</em
+            ><em
+              ><img
+                src="image/IMG_4224.JPG"
+                class="img2"
+                width="40px"
+                center /></em
+            >해결해 가는 편입니다.
+          </div>
+          <div>자기 객관화 하는 것을 좋아하며,</div>
+          <div>
+            <em class="highlight2 bgline2">긍정적인</em> <em>편입니다</em
+            ><img src="image/IMG_5717.jpeg" class="img3" width="40px" center />
+          </div>
+        </div>
+        <div class="heart_container">
+          <div class="heart">
+            <svg
+              width="100"
+              height="100"
+              viewBox="0 0 800 700"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m263.42 235.15c-66.24 0-120 53.76-120 120 0 134.76 135.93 170.09 228.56 303.31 87.574-132.4 228.56-172.86 228.56-303.31 0-66.24-53.76-120-120-120-48.048 0-89.402 28.37-108.56 69.188-19.161-40.817-60.514-69.188-108.56-69.188z"
+              />
+            </svg>
+          </div>
+          <div class="heart">
+            <svg
+              width="80"
+              height="80"
+              viewBox="0 0 800 700"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m263.42 235.15c-66.24 0-120 53.76-120 120 0 134.76 135.93 170.09 228.56 303.31 87.574-132.4 228.56-172.86 228.56-303.31 0-66.24-53.76-120-120-120-48.048 0-89.402 28.37-108.56 69.188-19.161-40.817-60.514-69.188-108.56-69.188z"
+              />
+            </svg>
+          </div>
+          <div class="heart">
+            <svg
+              width="72"
+              height="72"
+              viewBox="0 0 800 700"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m263.42 235.15c-66.24 0-120 53.76-120 120 0 134.76 135.93 170.09 228.56 303.31 87.574-132.4 228.56-172.86 228.56-303.31 0-66.24-53.76-120-120-120-48.048 0-89.402 28.37-108.56 69.188-19.161-40.817-60.514-69.188-108.56-69.188z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="like_container">
+          <span class="instagram-like">
+            <span id="instagram-heart">&hearts;</span>
+            <span id="instagram-like-count">&nbsp;&nbsp;</span>
+          </span>
+        </div>
       </div>
       <div class="section4">
         <div class="container">
-        <section></section>
-            <div id="boxes">
-              <div style="--color: #F44336"><span>열정</span></div>
-              <div style="--color: #E91E31"></div>
-              <div style="--color: #9C27B0"></div>
-              <div style="--color: #2196F3"></div>
-              <div style="--color: #4CAF50"></div>
-              <div style="--color: #FF9800"></div>
-            </div>
-        </div>
-
-      </div>
+          <section></section>
+          <div id="boxes">
+            <div style="--color: #f44336"><span>열정</span></div>
+            <div style="--color: #e91e31"></div>
+            <div style="--color: #9c27b0"><span>도전정신</span></div>
+            <div style="--color: #2196f3"></div>
+            <div style="--color: #4caf50"><span>긍정적인</span></div>
+            <div style="--color: #ff9800"></div>
           </div>
         </div>
       </div>
@@ -159,9 +229,26 @@
           document.documentElement.scrollTop ||
           window.scrollY;
 
+        scrollTop = Math.floor(scrollTop);
         document.querySelectorAll(".scroll").forEach((sc) => {
           sc.innerText = Math.round(scrollTop);
         });
+        // window.pageYOffset =< document.documentElement.scrollTop 이 될때 그 다음에 해줄 효과가 보여지게
+        // else는 위로 올라가면 다시 돌아가게
+        if (document.querySelector(".section3").offsetTop <= scrollTop) {
+          document.querySelector(".title").classList.add("show");
+          document.querySelector(".underline2").classList.add("line");
+          document.querySelector(".circle").classList.remove("circle3");
+          document.querySelector(".circle").classList.add("circle2");
+          document.querySelector(".highlight").classList.add("bgline");
+          document.querySelector(".highlight2").classList.add("bgline2");
+        } else {
+          document.querySelector(".title").classList.remove("show");
+          document.querySelector(".underline2").classList.remove("line");
+          document.querySelector(".circle").classList.remove("circle2");
+          document.querySelector(".highlight").classList.remove("bgline");
+          document.querySelector(".highlight2").classList.remove("bgline2");
+        }
       });
 
       gsap.set(".section desc div:not(.first-line)", { opacity: 0, y: 50 });

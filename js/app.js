@@ -53,3 +53,24 @@ highfive.addEventListener(" click", mouseclick);
 // mouseX-handX = x2 , mouseY-handY =y2
 // 각도 계산하기 Theta =Math.asin(x2 /1 * Math.sqrt(x2 * x2 + y2 * y2) )
 // transform : rotateZ 오른속법칙
+const max = 35 + Math.floor(Math.random() * 64);
+const spanHeart = document.querySelector("#instagram-heart");
+const spanCount = document.querySelector("#instagram-like-count");
+
+let count = 0;
+let timer = setInterval(() => {
+  if (count > max) {
+    clearInterval(timer);
+    count = 0;
+  } else {
+    spanHeart.classList.add("animate-beat");
+    spanCount.textContent = ++count;
+
+    spanCount.classList.add("animate-count");
+
+    setTimeout(() => {
+      spanCount.classList.remove("animate-count");
+      spanHeart.classList.remove("animate-beat");
+    }, 500);
+  }
+}, 600);

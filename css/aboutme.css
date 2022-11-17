@@ -1,99 +1,200 @@
-.section2 {
+#aboutme .section3 {
   position: relative;
+  top: -8vw;
+  color: #0e2a93;
+  background-color: #fee9e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  line-height: 160%;
 }
-#aboutme .section2 {
-  background-color: #ff555a;
-  width: 100%;
-  height: 8vw;
+.title {
+  background-color: none;
   color: white;
   font-size: 2.8vw;
+  z-index: 40;
+  transition: all 0.4s;
+  background-color: #ff555a;
+  color: white;
+  width: 100%;
+  height: 8vw;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0 0 120em 120em;
   position: sticky;
   top: 0;
-  z-index: 40;
-}
-/* aboutme section3 */
-#aboutme .section3 {
-  color: #0e2a93;
-  background: #ffe9e9;
-  display: flex;
-  height: 900px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 4vw;
-  line-height: 160%;
-  position: relative;
-  top: -100px;
-  padding-top: 100px;
 }
 
-#aboutme .section3 p {
-  width: 100%;
-  padding: 100px 0;
+.title.show {
+  font-size: 2vw;
+  height: 4vw;
+  border-radius: 0 0 200em 200em;
+  position: sticky;
+}
+.section3 .contents {
   display: flex;
   flex-direction: column;
+  padding-top: 20vw;
+  padding-bottom: 12vw;
 }
-
 /* 소통하는 것을 좋아하고 */
+
 .underline {
   position: relative;
 }
-.underline::after {
-  content: "";
-  width: 100%;
-  height: 5px;
-  background-color: #ffb1b3;
+
+.underline2.line {
+  display: block;
+  opacity: 0;
+  height: 4px;
   position: absolute;
-  top: 60px;
+  top: 100%;
   left: 0;
+}
+.underline2.line {
+  animation: ul 1.5s ease-out forwards;
+  background: #ffb1b3;
+}
+
+@keyframes ul {
+  0% {
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: calc(100% - 5px);
+  }
 }
 /* 상황 */
-.circle {
+.circle_container {
   position: relative;
 }
-.circle::after {
-  content: "";
+
+.contents svg {
   position: absolute;
-  top: -12px;
-  left: -5px;
-  width: 120px;
-  height: 80px;
-  border: 3px solid #ffb1b3;
-  padding: 10%;
-  border-radius: 60%;
-}
-.highlight {
-  position: relative;
-  z-index: 1;
-}
-.highlight:after {
-  position: absolute;
-  content: "";
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffb1b3;
-  z-index: -1;
+  transform: translate(-29%, -45%);
+}
+.circle3 {
+  display: none;
+}
+.circle2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke 2s ease-out forwards;
+  animation-delay: 1.7s;
+}
+
+@keyframes stroke {
+  from {
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.highlight.bgline {
+  animation: bg 1.1s ease-out forwards;
+  animation-delay: 2s;
+}
+.highlight2.bgline2 {
+  animation: bg 1.1s ease-out forwards;
+  animation-delay: 3.2s;
+}
+@keyframes bg {
+  0% {
+    background-color: rgba(255, 176, 179, 0);
+  }
+  100% {
+    width: 100%;
+
+    background-color: rgba(255, 176, 179, 1);
+  }
 }
 
 .img1,
 .img2,
 .img3 {
   background-size: cover;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: inline-block;
   margin: 0 8px;
   margin-top: 1%;
 }
 
+.heart_container {
+  top: 0;
+}
+.heart {
+  position: absolute;
+  top: 62%;
+  left: 82%;
+}
+.heart_container .heart:nth-child(1) svg {
+  opacity: 0;
+  -webkit-animation: heartUp 1.4s infinite ease-in;
+  animation: heartUp 1.4s infinite ease-in;
+}
+.heart_container .heart:nth-child(2) svg {
+  position: absolute;
+  left: 1rem;
+  opacity: 0;
+  -webkit-animation: heartUp 1.4s 0.3s infinite ease-in;
+  animation: heartUp 1.4s 0.3s infinite ease-in;
+}
+.heart_container .heart:nth-child(3) svg {
+  position: absolute;
+  left: 0.5rem;
+  opacity: 0;
+  -webkit-animation: heartUp 1.4s 0.6s infinite ease-in;
+  animation: heartUp 1.4s 0.6s infinite ease-in;
+}
+
+.heart_container svg {
+  fill: #f58d9c;
+}
+
+@keyframes heartUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0) rotate(10deg);
+    transform: translate3d(0, 0, 0) rotate(10deg);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -35vh, 0) scale(1.2) rotate(-10deg);
+    transform: translate3d(0, -35vh, 0) scale(1.2) rotate(-10deg);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 /* section4 */
 .section4 {
   position: relative;
@@ -107,16 +208,14 @@
 
 section {
   width: 100%;
-  height: 1000px;
+  height: 650px;
   transition: all 0.5s ease;
   background: var(--bg-color, #f44336);
   opacity: 0.1;
   z-index: -1;
   position: absolute;
-  top: -100px;
 }
 #boxes {
-  counter-reset: number;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   z-index: 0;
@@ -138,18 +237,21 @@ section {
   background: var(--color, #aaa);
   border: 0 solid transparent;
   box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   opacity: 0.8;
   --dx: calc(var(--size) - var(--x));
   --dy: calc(var(--size) - var(--y));
 }
-#boxes div:first-child {
+#boxes div:first-child,
+#boxes div:nth-child(3),
+#boxes div:nth-child(5) {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 35px;
+  font-size: 26px;
 }
 
 #boxes div:nth-child(2) {
@@ -186,12 +288,11 @@ section {
     calc(var(--y) / var(--size) * 100%) calc(var(--dy) / var(--size) * 100%)
     calc(var(--dy) / var(--size) * 100%);
 }
+
 #boxes div:after {
   content: "";
-  width: 500px;
-  height: 500px;
   color: rgba(255, 255, 255, 0);
-  font-size: calc(1vw + 1.2em);
+  /* font-size: calc(1vw + 1.1em); */
   font-weight: 200;
   transition: all 0.2s ease;
   transition-delay: 0.1s;
@@ -201,16 +302,88 @@ section {
   align-items: center;
   position: absolute;
 }
-/* #boxes div:first-child:after {
-  content: "열정";
-} */
-#boxes div:nth-child(3):after {
-  content: "도전정신";
-}
-#boxes div:nth-child(5):after {
-  content: "긍정적인";
-}
+
 #boxes div:hover:after {
   color: rgba(255, 255, 255, 0.7);
   transform: translate3d(0, 0, 0);
+}
+
+.like_container {
+  position: absolute;
+  top: 69%;
+  left: 81%;
+}
+.instagram-like {
+  display: flex;
+  width: 90px;
+  height: 60px;
+  padding: 0 1em;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #ff555a;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4), 0 0 6px rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.instagram-like::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #ff555a;
+  position: absolute;
+  top: 97%;
+}
+
+.instagram-like #instagram-heart {
+  font-size: 2rem;
+}
+
+.instagram-like #instagram-like-count {
+  font-size: 1.5rem;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+
+@keyframes animation-pop {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animation-beat {
+  from {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-count {
+  animation: animation-pop 0.5s alternate;
+}
+
+.animate-beat {
+  animation: animation-beat 0.5s ease;
+}
+
+@media (max-width: 960px) {
+  .circle_container circle {
+    display: none;
+  }
 }
