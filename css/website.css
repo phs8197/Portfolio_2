@@ -16,6 +16,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
+  transition: all 0.4s;
 }
 /* website section2 */
 #website .section2 {
@@ -74,7 +75,7 @@
 #website .section3 .container.megabox {
   background-color: #2c218f;
 }
-.section3 .container .column1 {
+#website .section3 .container .column1 {
   width: 50%;
   box-sizing: border-box;
   color: 000;
@@ -85,16 +86,14 @@
   padding: 4% 0;
   padding-left: 5%;
 }
-.section3 .container .column1.megabox_text {
-  padding-left: 7%;
-}
-.section3 .container .column1 .title_en {
-  font-size: 3em;
+
+#website .section3 .container .column1 .title_en {
+  font-size: 32px;
   font-weight: 600;
   color: #fff;
 }
-.section3 .container .column1 .title_ko {
-  font-size: 1.3em;
+#website .section3 .container .column1 .title_ko {
+  font-size: 18px;
   font-weight: 400;
   width: 100%;
   display: flex;
@@ -103,32 +102,33 @@
   color: #fff;
 }
 
-.section3 .container .column1 .article {
+#website .section3 .container .column1 .article {
   padding-top: 8%;
-  font-size: 1em;
+  font-size: 14px;
   font-weight: 300;
   line-height: 150%;
   letter-spacing: 1px;
   color: #fff;
 }
-.section3 .container .column1 .button {
-  width: 80%;
+#website .section3 .container .column1 .button {
+  width: 400px;
   display: flex;
   flex-direction: row;
   margin-top: 6%;
+  font-size: 14px;
+  letter-spacing: 1.5px;
 }
-.section3 .container .responsive_text .button button {
+#website .section3 .container .responsive_text .button button {
   border: none;
   background-color: #fff;
   color: #0e2a93;
   padding: 2% 10%;
   font-family: GmarketSans;
-  font-size: 1em;
+  font-size: 14px;
   border-radius: 22px;
   margin-right: 5%;
-  letter-spacing: 1.5px;
 }
-.section3 .container .megabox_text .button button {
+#website .section3 .container .megabox_text .button button {
   border: none;
   background-color: white;
   color: #2c218f;
@@ -136,12 +136,11 @@
   font-family: GmarketSans;
   border-radius: 23px;
   margin-right: 5%;
-  font-size: 1em;
+  font-size: 14px;
   border-radius: 22px;
   margin-right: 5%;
-  letter-spacing: 1.5px;
 }
-.section3 .container .column2 {
+#website .section3 .container .column2 {
   display: flex;
   width: 50%;
   justify-content: flex-end;
@@ -149,12 +148,13 @@
   padding-right: 3%;
   position: relative;
 }
-.section3 .container .column2 img {
+#website .section3 .container .column2 img {
   position: absolute;
   right: 10%;
   z-index: 10;
+  top: -350px;
 }
-.section3 .container .column2.megabox_image img {
+#website .section3 .container .column2.megabox_image img {
   right: 0;
 }
 /* 사진 바꾸면서 여기있는건 같이 다 바꾸자 */
@@ -176,4 +176,47 @@
 }
 #website .section3 .container:last-child .button button {
   color: #93460e;
+}
+
+@media (max-width: 960px) {
+  #website .section3 .container .column1 .title_en {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  #website .section3 .container .column1 .title_ko {
+    font-size: 15px;
+  }
+  #website .section3 .container .column1 .article {
+    display: none;
+  }
+  #website .section3 .container .column1 .button {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 6%;
+    font-size: 12px;
+  }
+  #website .section3 .container .column2 {
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  #website .section3 .container .column1 .title_en {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  #website .section3 .container .column1 .title_ko {
+    font-size: 13px;
+  }
+  #website .section3 .container .column1 .article {
+    display: none;
+  }
+  #website .section3 .container .column1 .button {
+    width: 300px;
+    display: flex;
+    font-size: 5px;
+  }
+  #website .section3 .container .column2 {
+    width: 40%;
+  }
 }

@@ -1,0 +1,185 @@
+/* section4 */
+.section4 {
+  position: relative;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  transition: all 0.5s ease;
+  background: var(--bg-color, #f44336);
+  opacity: 0.1;
+  z-index: -1;
+}
+#boxes {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  z-index: 0;
+  padding: 12vw 0;
+}
+#boxes span {
+  font-size: 26px;
+}
+@media (max-width: 960px) {
+  #boxes span {
+    font-size: 22px;
+  }
+}
+@media (max-width: 600px) {
+  #boxes span {
+    font-size: 18px;
+  }
+}
+@media (max-width: 450px) {
+  #boxes span {
+    font-size: 15px;
+  }
+}
+
+#boxes div {
+  width: 23.5vw;
+  aspect-ratio: 1/1;
+  min-width: 5em;
+  min-height: 5em;
+  transition: 0.5s all ease;
+  background: var(--color, #aaa);
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  opacity: 0.8;
+  --dx: calc(var(--size) - var(--x));
+  --dy: calc(var(--size) - var(--y));
+}
+#boxes div:first-child,
+#boxes div:nth-child(3),
+#boxes div:nth-child(5) {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#boxes div:nth-child(2) {
+  background: url("../image/IMG_6416.JPG") no-repeat center;
+  background-size: cover;
+  opacity: 1;
+}
+
+#boxes div:nth-child(4) {
+  background: url("../image/IMG_0312.JPG") no-repeat center;
+  background-size: cover;
+  opacity: 1;
+}
+#boxes div:last-child {
+  background: url("../image/IMG_5728.jpeg") no-repeat center;
+  background-size: cover;
+  opacity: 1;
+}
+#boxes div:first-child {
+  --x: 84;
+  --y: 75;
+  --size: 128;
+}
+
+#boxes div:first-child:hover,
+#boxes div:nth-child(3):hover,
+#boxes div:nth-child(5):hover {
+  opacity: 1;
+  font-weight: 500;
+  cursor: pointer;
+  border: calc(2px + 0.85vw) solid rgba(255, 255, 255, 0.5);
+  transition: 0.5s background-color ease, 0.2s border ease;
+  border-radius: calc(var(--x) / var(--size) * 100%)
+    calc(var(--dx) / var(--size) * 100%) calc(var(--dx) / var(--size) * 100%)
+    calc(var(--x) / var(--size) * 100%) / calc(var(--y) / var(--size) * 100%)
+    calc(var(--y) / var(--size) * 100%) calc(var(--dy) / var(--size) * 100%)
+    calc(var(--dy) / var(--size) * 100%);
+}
+
+#boxes div:first-child:after,
+#boxes div:nth-child(3):after,
+#boxes div:nth-child(5):after {
+  content: "";
+  color: rgba(255, 255, 255, 0);
+  /* font-size: calc(1vw + 1.1em); */
+  font-weight: 200;
+  transition: all 0.2s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, -0.5em, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+#boxes div:hover:after {
+  color: rgba(255, 255, 255, 0.7);
+  transform: translate3d(0, 0, 0);
+}
+.shape_moving {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transition: all 2s ease-in-out;
+  z-index: 5;
+}
+.shape_moving1 {
+  border-radius: 50% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 3s ease-in-out infinite;
+  z-index: 5;
+}
+.shape_moving2 {
+  border-radius: 20% 70% 80% 30% / 30% 70% 40% 50%;
+  animation: morph2 3s ease-in-out infinite;
+}
+.shape_moving3 {
+  border-radius: 30% 60% 20% 80% / 50% 40% 70% 40%;
+  animation: morph3 3s ease-in-out infinite;
+  z-index: 5;
+}
+@keyframes morph {
+  0% {
+    border-radius: 50% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 50% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+@keyframes morph2 {
+  0% {
+    border-radius: 20% 70% 80% 30% / 30% 70% 40% 50%;
+  }
+
+  50% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  100% {
+    border-radius: 20% 70% 80% 30% / 30% 70% 40% 50%;
+  }
+}
+
+@keyframes morph3 {
+  0% {
+    border-radius: 30% 60% 20% 80% / 50% 40% 70% 40%;
+  }
+
+  50% {
+    border-radius: 60% 40% 50% 60% / 30% 60% 50% 30%;
+  }
+
+  100% {
+    border-radius: 30% 60% 20% 80% / 50% 40% 70% 40%;
+  }
+}
