@@ -130,7 +130,9 @@ figcaption {
   padding: 0;
   overflow-x: hidden;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 /* 폰트 초기화 */
 body,
 button,
