@@ -130,7 +130,7 @@
 }
 #website .section3 .container .megabox_text .button button {
   border: none;
-  background-color: white;
+  background-color: #fff;
   color: #2c218f;
   padding: 2% 10%;
   font-family: GmarketSans;
@@ -211,10 +211,13 @@
   #website .section3 .container .column1 .article {
     display: none;
   }
-  #website .section3 .container .column1 .button {
-    width: 300px;
+  #website .section3 .container .column1 .button button {
+    width: 100px;
     display: flex;
-    font-size: 5px;
+    font-size: 12px;
+    padding: 2px 3px;
+    margin-right: 5px;
+    justify-content: center;
   }
   #website .section3 .container .column2 {
     width: 40%;
