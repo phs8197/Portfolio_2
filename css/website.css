@@ -242,36 +242,39 @@ body .particletext.confetti > .particle.c2 {
   color: #930e5e;
 }
 
-/* @media (max-width: 960px) {
+@media (max-width: 960px) {
+  #website .section3 .container {
+    width: 96%;
+    border-radius: 85px;
+  }
   #website .section3 .container .column1 .title_en {
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 32px;
   }
   #website .section3 .container .column1 .title_ko {
-    font-size: 15px;
+    display: none;
   }
   #website .section3 .container .column1 .article {
-    display: none;
+    font-size: 14px;
   }
   #website .section3 .container .column1 .button {
     width: 300px;
-    display: flex;
-    flex-direction: row;
     margin-top: 6%;
-    font-size: 12px;
+  }
+  #website .section3 .container .column1 .button button {
+    padding: 2% 8%;
+    font-size: 14px;
+    margin-right: 8%;
   }
   #website .section3 .container .column2 {
-    width: 40%;
+    width: 50%;
   }
 }
 @media (max-width: 600px) {
   #website .section3 .container .column1 .title_en {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
   }
-  #website .section3 .container .column1 .title_ko {
-    font-size: 13px;
-  }
+
   #website .section3 .container .column1 .article {
     display: none;
   }
@@ -286,4 +289,4 @@ body .particletext.confetti > .particle.c2 {
   #website .section3 .container .column2 {
     width: 40%;
   }
-} */
+}
