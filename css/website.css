@@ -241,14 +241,35 @@ body .particletext.confetti > .particle.c2 {
 #website .section3 .container:last-child .button button {
   color: #930e5e;
 }
+@media (max-width: 1250px) {
+  #website .section3 .container {
+    width: 94%;
+    border-radius: 82px;
+  }
+  #website .section3 .container .column1 .title_en {
+    font-size: 32px;
+  }
 
-@media (max-width: 960px) {
+  #website .section3 .container .column1 .article {
+    font-size: 18px;
+  }
+  #website .section3 .container .column1 .button {
+    width: 400px;
+    margin-top: 6%;
+  }
+  #website .section3 .container .column1 .button button {
+    padding: 2% 8%;
+    font-size: 18px;
+    margin-right: 8%;
+  }
+}
+@media (max-width: 965px) {
   #website .section3 .container {
     width: 96%;
     border-radius: 85px;
   }
   #website .section3 .container .column1 .title_en {
-    font-size: 32px;
+    font-size: 28px;
   }
   #website .section3 .container .column1 .title_ko {
     display: none;
@@ -265,11 +286,8 @@ body .particletext.confetti > .particle.c2 {
     font-size: 14px;
     margin-right: 8%;
   }
-  #website .section3 .container .column2 {
-    width: 50%;
-  }
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   #website .section3 .container .column1 .title_en {
     font-size: 25px;
     font-weight: 600;
