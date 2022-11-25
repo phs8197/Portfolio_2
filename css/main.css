@@ -20,7 +20,7 @@
   z-index: 10;
 }
 #header .logo {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
 }
 #header .hamburger {
@@ -37,7 +37,7 @@
 
 @media (max-width: 960px) {
   #header .logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
   }
   #header .hamburger {
@@ -50,7 +50,7 @@
 }
 @media (max-width: 600px) {
   #header .logo {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
   }
   #header .hamburger {

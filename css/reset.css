@@ -81,6 +81,7 @@
       format("truetype");
   font-display: swap;
 }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* border-box 초기화 */
 *,
@@ -130,7 +131,7 @@ figcaption {
   padding: 0;
   overflow-x: hidden;
 }
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 /* 폰트 초기화 */
