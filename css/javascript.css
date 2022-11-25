@@ -128,7 +128,7 @@ body .particletext.confetti > .particle.c2 {
 #javascript .section3 .container .number {
   font-size: 90px;
   font-weight: 700;
-  z-index: 10;
+  z-index: 15;
   position: absolute;
 }
 
@@ -140,6 +140,7 @@ body .particletext.confetti > .particle.c2 {
   flex-direction: column;
   transition: all 0.4s ease-in-out;
 }
+
 #javascript .section3 .container .title {
   background-color: white;
   border: 3px solid black;
@@ -148,7 +149,7 @@ body .particletext.confetti > .particle.c2 {
   color: black;
   text-align: center;
   display: inline-block;
-  z-index: 5;
+  z-index: 20;
   position: relative;
   padding: 20px 40px;
   width: fit-content;
@@ -164,12 +165,12 @@ body .particletext.confetti > .particle.c2 {
   text-align: start;
   color: black;
   position: absolute;
-  z-index: 10;
+  z-index: 20;
   box-sizing: border-box;
 }
 #javascript .section3 .container .number.style1 {
   margin-left: 150px;
-  top: -40px;
+  top: -30px;
   left: 50px;
 }
 #javascript .section3 .container .number.style2 {
@@ -177,21 +178,45 @@ body .particletext.confetti > .particle.c2 {
   top: -40px;
   right: 50px;
 }
-#javascript .section3 .container .title.style1 {
-  top: 60px;
-  left: 400px;
+#javascript .section3 .container .title.title1 {
+  top: -40px;
+  left: 100px;
 }
-#javascript .section3 .container .title.style2 {
-  top: 100px;
-  right: 350px;
+#javascript .section3 .container .title.title2 {
+  top: -40px;
+  right: 130px;
 }
-#javascript .section3 .container .contents.style1 {
+#javascript .section3 .container .title.title3 {
+  top: -130px;
+  left: 170px;
+}
+#javascript .section3 .container .title.title4 {
+  top: -80px;
+  right: 180px;
+}
+#javascript .section3 .container .title.title5 {
+  top: -50px;
+  left: 170px;
+}
+#javascript .section3 .container .contents.content1 {
+  top: 400px;
+  left: 630px;
+}
+#javascript .section3 .container .contents.content2 {
+  top: 400px;
+  right: 630px;
+}
+#javascript .section3 .container .contents.content3 {
   top: 300px;
-  left: 400px;
+  left: 680px;
 }
-#javascript .section3 .container .contents.style2 {
-  top: 320px;
-  right: 350px;
+#javascript .section3 .container .contents.content4 {
+  top: 350px;
+  right: 690px;
+}
+#javascript .section3 .container .contents.content5 {
+  top: 400px;
+  left: 720px;
 }
 
 #javascript .section3 .container .image.style1 {
@@ -205,7 +230,19 @@ body .particletext.confetti > .particle.c2 {
   top: 50px;
   left: 50px;
   cursor: pointer;
+  background-color: #000;
 }
+/* #javascript .section3 .container .image.style1:hover .image::after {
+  content: "";
+  background-color: #000;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 12;
+} */
 
 #javascript .section3 .container .image.style2 {
   top: 90px;
