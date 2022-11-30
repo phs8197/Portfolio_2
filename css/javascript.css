@@ -1,5 +1,6 @@
 #javascript {
   background-color: #fffbef;
+  padding-bottom: 6vw;
 }
 #javascript .section1 {
   background-color: #f4ed6b;
@@ -125,6 +126,7 @@ body .particletext.confetti > .particle.c2 {
   position: relative;
   margin-top: 150px;
 }
+
 #javascript .section3 .container .number {
   font-size: 90px;
   font-weight: 700;
@@ -230,20 +232,21 @@ body .particletext.confetti > .particle.c2 {
   top: 50px;
   left: 50px;
   cursor: pointer;
-  background-color: #000;
 }
-/* #javascript .section3 .container .image.style1:hover .image::after {
-  content: "";
-  background-color: #000;
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+
+#javascript .section3 .container .sideImage.hidden {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
   position: absolute;
   z-index: 12;
-} */
-
+}
 #javascript .section3 .container .image.style2 {
   top: 90px;
   right: 90px;

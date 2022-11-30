@@ -53,3 +53,32 @@ highfive.addEventListener(" click", mouseclick);
 // mouseX-handX = x2 , mouseY-handY =y2
 // 각도 계산하기 Theta =Math.asin(x2 /1 * Math.sqrt(x2 * x2 + y2 * y2) )
 // transform : rotateZ 오른속법칙
+
+// javascript
+// const image = document.querySelector(
+//   "#javascript .section3 .container .image .sideImage"
+// );
+
+// function imageHover(event) {
+//   image.classList.add("hidden");
+//   image.classList.add.innerText = "VIEW MORE";
+// }
+// image.addEventListener("mouseover", imageHover);
+
+// aboutme
+const imageBox = document.querySelector(
+  "#aboutme .section3 .box_container .box:not(.box3)"
+);
+const imageBox3 = document.querySelector(
+  "#aboutme .section3 .box_container .box3"
+);
+function hoverBox(event) {
+  imageBox3.remove.classList("wide");
+  imageBox3.add.classList("narrow");
+}
+function hoverBox3(event) {
+  imageBox3.remove.classList("narrow");
+  imageBox3.add.classList("wide");
+}
+imageBox.addEventListener("mouseover", hoverBox);
+imageBox3.addEventListener("mouseover", hoverBox3);

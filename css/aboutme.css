@@ -149,53 +149,67 @@
   }
 }
 /* section4 */
-.section3 .box_container {
+#aboutme .section3 .box_container {
   display: flex;
   justify-content: center;
   padding-bottom: 6vw;
 }
-.section3 .box_container .box {
+#aboutme .section3 .box_container .box1,
+#aboutme .section3 .box_container .box2,
+#aboutme .section3 .box_container .box4,
+#aboutme .section3 .box_container .box5 {
   width: 10vw;
   height: 450px;
   border-radius: 900px;
   transition: all 0.3s ease-in-out;
 }
-
-.section3 .box_container .box:hover {
+#aboutme .section3 .box_container .box3.wide {
+  width: 32vw;
+  height: 450px;
+  border-radius: 900px;
+  transition: all 0.3s ease-in-out;
+}
+.narrow {
+  width: 10vw;
+}
+#aboutme .section3 .box_container .box1:hover,
+#aboutme .section3 .box_container .box2:hover,
+#aboutme .section3 .box_container .box4:hover,
+#aboutme .section3 .box_container .box5:hover {
   width: 32vw;
   border-radius: 900px;
 }
-
-.section3 .box_container .box1:hover {
-  background: url(../image/IMG_1134.JPG);
+#aboutme .section3 .box_container .box3 {
+  background: url(../image/1000.JPG);
   background-position: center;
   background-size: cover;
 }
-.section3 .box_container .box2:hover {
-  background: url(../image/IMG_5728.jpeg);
-  background-position: center;
-  background-size: cover;
-}
-.section3 .box_container .box3:hover {
+#aboutme .section3 .box_container .box1 {
   background: url(../image/IMG_6416.JPG);
   background-position: center;
   background-size: cover;
 }
-.section3 .box_container .box4:hover {
+.section3 .box_container .box2 {
+  background: url(../image/IMG_5728.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.section3 .box_container .box3 {
+  background: url(../image/1000.JPG);
+  background-position: center;
+  background-size: cover;
+}
+.section3 .box_container .box4 {
   background: url(../image/IMG_0312.JPG);
   background-position: center;
   background-size: cover;
 }
-.section3 .box_container .box5:hover {
-  background: url(../image/IMG_0465.JPG);
-  background-position: center;
+.section3 .box_container .box5 {
+  background: url(../image/IMG_1134.JPG);
+  background-position: right;
   background-size: cover;
 }
-.section3 .box_container .box6:hover {
-  background: url(../image/IMG_5717.jpeg);
-  background-position: center;
-  background-size: cover;
-}
+
 .section3 .box_container .box1 {
   background-color: #fe4f5d;
 }
@@ -203,14 +217,11 @@
   background-color: #012b99;
 }
 .section3 .box_container .box3 {
-  background-color: #f4ed6b;
-}
-.section3 .box_container .box4 {
-  background-color: #012b99;
-}
-.section3 .box_container .box5 {
   background-color: #fe4f5d;
 }
-.section3 .box_container .box6 {
+.section3 .box_container .box4 {
   background-color: #f4ed6b;
+}
+.section3 .box_container .box5 {
+  background-color: #012b99;
 }
