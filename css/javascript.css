@@ -1109,7 +1109,6 @@ body .particletext.confetti > .particle.c2 {
   /* top: -75%;
   left: 50%;
   transform: translateY(calc(var(--progress) * 25%)) translateX(-50%); */
-  width: auto;
 
   object-fit: cover;
 }
@@ -1123,8 +1122,6 @@ body .particletext.confetti > .particle.c2 {
 }
 #javascript .section3 #wrap .panel:first-child .thumb .inner img {
   height: 110%;
-  left: -33%;
-  top: -3%;
 }
 #javascript .section3 #wrap .panel:nth-child(2) .thumb .inner {
   width: 500px;
@@ -1136,7 +1133,6 @@ body .particletext.confetti > .particle.c2 {
 }
 #javascript .section3 #wrap .panel:nth-child(2) .thumb .inner img {
   height: 100%;
-  left: -1.5%;
 }
 #javascript .section3 #wrap .panel:nth-child(3) .thumb .inner {
   width: 550px;
@@ -1148,7 +1144,6 @@ body .particletext.confetti > .particle.c2 {
 }
 #javascript .section3 #wrap .panel:nth-child(3) .thumb .inner img {
   height: 100%;
-  left: -1.5%;
 }
 #javascript .section3 #wrap .panel:nth-child(4) .thumb .inner {
   width: 580px;
@@ -1160,7 +1155,6 @@ body .particletext.confetti > .particle.c2 {
 }
 #javascript .section3 #wrap .panel:nth-child(4) .thumb .inner img {
   height: 100%;
-  left: -10%;
 }
 #javascript .section3 #wrap .panel:last-child .thumb .inner {
   width: 580px;
@@ -1172,5 +1166,4 @@ body .particletext.confetti > .particle.c2 {
 }
 #javascript .section3 #wrap .panel:last-child .thumb .inner img {
   height: 100%;
-  left: -10%;
 }
