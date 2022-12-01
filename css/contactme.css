@@ -1,5 +1,6 @@
 #contactme {
   background-color: #ecf2f2;
+  position: relative;
 }
 
 #contactme .section1 {
@@ -18,11 +19,15 @@
   z-index: 50;
   transition: height 0.7s ease-in, border-radius 0.7s ease-in,
     font-size 0.7s ease-in;
+  position: relative;
+  z-index: 3;
 }
 #contactme .section2 {
   display: flex;
   padding: 6vw 4vw;
   color: #0e2a93;
+  position: relative;
+  z-index: 3;
 }
 #contactme .section2 .column1 {
   width: 30%;
@@ -63,4 +68,121 @@
 } */
 #contactme .section2 .column2 .material-symbols-outlined {
   font-size: 50px;
+}
+
+/* #contactme .section3 */
+#contactme .section3 {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  z-index: 1;
+}
+:root {
+  --step--2: clamp(3.13rem, 2.62rem + 2.51vw, 5.76rem);
+  --step--1: clamp(3.75rem, 3.09rem + 3.29vw, 7.2rem);
+  --step-0: clamp(4.5rem, 3.64rem + 4.29vw, 9rem);
+}
+
+@-webkit-keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes marquee-r {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes marquee-r {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes rollCage {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(5turn);
+  }
+}
+@keyframes rollCage {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(5turn);
+  }
+}
+
+.marquee {
+  border-bottom: 1px solid #efefef;
+  color: #fefefe;
+  font-size: var(--step-0);
+  height: calc(170px + 4rem);
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+.marquee img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.track {
+  height: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+  position: absolute;
+  transition: background-color 300ms ease, color 300ms ease;
+  white-space: nowrap;
+}
+.track .text {
+  -webkit-animation: marquee 50000ms linear infinite;
+  animation: marquee 50000ms linear infinite;
+  align-items: center;
+  display: inline-flex;
+  will-change: transform;
+}
+.track .text.-r {
+  -webkit-animation-name: marquee-r;
+  animation-name: marquee-r;
+}
+.track .text.-twox {
+  -webkit-animation-duration: 25000ms;
+  animation-duration: 25000ms;
+}
+.track:hover {
+  background-color: #efefef;
+  color: #1a1f24;
+}
+.track:hover img {
+  -webkit-animation: rollCage 10000ms linear infinite;
+  animation: rollCage 10000ms linear infinite;
+}
+.track:hover .-green {
+  color: #beb9a3;
+}
+
+.-green {
+  color: #60c4cb;
+  font-weight: 900;
 }

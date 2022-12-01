@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 2%;
+  margin-top: 7%;
 }
 #website .section2 .contents {
   font-size: 4vw;
@@ -225,7 +225,7 @@ body .particletext.confetti > .particle.c2 {
   position: absolute;
   right: 10%;
   z-index: 10;
-  top: -350px;
+  top: -150px;
 }
 #website .section3 .container .column2.megabox_image img {
   right: 0;
