@@ -307,4 +307,7 @@ body .particletext.confetti > .particle.c2 {
   #website .section3 .container .column2 {
     width: 40%;
   }
+  #website .section3 .container .column2 img {
+    top: -250px;
+  }
 }

@@ -1,4 +1,5 @@
 body {
   font-family: GmarketSans, Arial, Helvetica, sans-serif;
   font-weight: 200;
+  height: fit-content;
 }

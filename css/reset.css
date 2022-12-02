@@ -99,7 +99,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-overflow-style: none;
 }
-
+body {
+  min-height: 100%;
+}
 /* 공백 초기화 */
 body,
 button,
@@ -144,8 +146,8 @@ textarea {
   font-size: 16px;
   line-height: 1.4;
   color: #202020;
-  font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont,
-    "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-family: GmarketSans, -apple-system, BlinkMacSystemFont, "Malgun Gothic",
+    "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -156,6 +158,8 @@ a:hover,
 a:focus {
   color: inherit;
   text-decoration: none;
+  outline: none;
+  cursor: pointer;
 }
 
 /* 버튼 초기화 */
