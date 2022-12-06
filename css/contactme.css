@@ -25,10 +25,9 @@
 }
 #contactme .section2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  padding: 6vw 4vw;
-
+  padding-top: 8vw;
   color: #0e2a93;
   position: relative;
   z-index: 3;
@@ -39,6 +38,7 @@
 }
 #contactme .section2 .column1 img {
   width: 80%;
+  border-radius: 20px;
 }
 
 #contactme .section2 .column2 {
@@ -48,7 +48,6 @@
   width: 30%;
   height: 100%;
   font-weight: 500;
-
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -56,7 +55,7 @@
 #contactme .section2 .column2 h1 {
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 75px;
+  margin-bottom: 65px;
 }
 #contactme .section2 .column2 .row2 div {
   display: flex;
@@ -64,11 +63,10 @@
   margin-bottom: 3%;
 }
 #contactme .section2 .column2 .row2 div span {
-  margin-right: 5%;
+  margin-right: 7%;
+  font-weight: 700;
 }
-#contactme .section2 .column2 .material-symbols-outlined {
-  font-size: 36px;
-}
+
 @media (max-width: 1150px) {
   #contactme .section2 .column2 {
     font-size: 24px;
@@ -119,9 +117,13 @@
 /* #contactme .section3 */
 #contactme .section3 {
   position: absolute;
-  top: 120px;
+  top: 10%;
   left: 0;
   z-index: 1;
+}
+
+#contactme .section3 .marquee:last-child {
+  margin-top: 250px;
 }
 :root {
   --step--2: clamp(3.13rem, 2.62rem + 2.51vw, 5.76rem);
@@ -201,14 +203,7 @@
   transition: background-color 300ms ease, color 300ms ease;
   white-space: nowrap;
 }
-@media (max-width: 1150px) {
-  #contactme .section3 .marquee:nth-child(3) {
-    display: none;
-  }
-  #contactme {
-    height: 700px;
-  }
-}
+
 .track .text {
   -webkit-animation: marquee 50000ms linear infinite;
   animation: marquee 50000ms linear infinite;

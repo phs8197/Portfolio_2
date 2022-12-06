@@ -19,50 +19,7 @@
   transition: height 0.7s ease-in, border-radius 0.7s ease-in,
     font-size 0.7s ease-in;
 }
-/* website section2 */
-#website .section2 {
-  color: #0e2a93;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 7%;
-}
-#website .section2 .contents {
-  font-size: 4vw;
-}
-#website .section2 .contents em {
-  font-weight: 500;
-}
-#website .section2 desc {
-  display: flex;
-  margin-right: 10px;
-  font-size: 3vw;
-  margin-top: 2%;
-  width: 80%;
-  justify-content: center;
-}
-#website .section2 desc em {
-  margin-right: 4%;
-  position: relative;
-  z-index: 1;
-}
-#website .section2 desc em::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 30px;
-  background: rgb(180, 180, 255, 0.7);
-  border-radius: 30px;
-  transition: all 0.3s;
-  z-index: -1;
-}
-#website .section2 desc em:hover::before {
-  height: 60px;
-}
+
 body .particletext {
   text-align: center;
   position: relative;
@@ -120,194 +77,163 @@ body .particletext.confetti > .particle.c2 {
   }
 }
 /* website section3 */
+
 #website .section3 {
+  overflow-y: visible;
+  position: relative;
+  height: unset;
+  overflow-x: hidden;
+  margin: 0;
+  background: #e8ecfb;
+}
+#website .container {
+  width: 600% !important;
+  height: 100vh !important;
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.lastContainer {
+  display: flex;
+  height: 100vh;
+}
+#website .section3 .panel {
+  width: 100%;
+  height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 6vw;
-}
-#website .section3 .container {
-  width: 90%;
-  border-radius: 70px;
-  display: flex;
-  margin-top: 15%;
-}
-#website .section3 .container.responsive {
-  background-color: #0e2a93;
-}
-#website .section3 .container.megabox {
-  background-color: #490e93;
-}
-#website .section3 .container.react {
-  background-color: #680e93;
-}
-#website .section3 .container.vue {
-  background-color: #930e86;
-}
-#website .section3 .container.php {
-  background-color: #930e5e;
-}
-#website .section3 .container .column1 {
-  width: 50%;
-  box-sizing: border-box;
-  color: 000;
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  justify-content: space-between;
-  padding: 4% 0;
-  padding-left: 5%;
-}
-
-#website .section3 .container .column1 .title_en {
-  font-size: 42px;
-  font-weight: 600;
-  color: #fff;
-}
-#website .section3 .container .column1 .title_ko {
-  font-size: 16px;
-  font-weight: 400;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  padding-top: 2%;
-  color: #fff;
-}
-
-#website .section3 .container .column1 .article {
-  padding-top: 8%;
-  font-size: 20px;
   font-weight: 300;
-  line-height: 150%;
-  letter-spacing: 1px;
-  color: #fff;
-}
-#website .section3 .container .column1 .button {
-  width: 400px;
-  display: flex;
-  flex-direction: row;
-  margin-top: 6%;
-  font-size: 18px;
-  letter-spacing: 1.5px;
-}
-#website .section3 .container .responsive_text .button button {
-  border: none;
-  background-color: #fff;
-  color: #0e2a93;
-  padding: 2% 10%;
-  font-family: GmarketSans;
-  font-size: 18px;
-  border-radius: 22px;
-  margin-right: 5%;
-}
-#website .section3 .container .megabox_text .button button {
-  border: none;
-  background-color: #fff;
-  color: #490e93;
-  padding: 2% 10%;
-  font-family: GmarketSans;
-  border-radius: 23px;
-  margin-right: 5%;
-  font-size: 18px;
-  border-radius: 22px;
-  margin-right: 5%;
-}
-#website .section3 .container .column2 {
-  display: flex;
-  width: 50%;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-right: 3%;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
   position: relative;
+  box-sizing: border-box;
+  padding: 10px;
 }
-#website .section3 .container .column2 img {
+#website .section3 .panel h1 {
   position: absolute;
-  right: 10%;
-  z-index: 10;
-  top: -150px;
+  top: 14%;
+  left: 10%;
+  color: #0e2a93;
+  font-size: 90px;
+  font-weight: 700;
+  z-index: 3;
 }
-#website .section3 .container .column2.megabox_image img {
-  right: 0;
+#website .section3 .panel img {
+  width: 60%;
+  margin-top: 20px;
 }
-/* 사진 바꾸면서 여기있는건 같이 다 바꾸자 */
+#website .section3 .panel button {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  padding: 8px 20px;
+  border-radius: 25px;
+  background: none;
+  font-size: 18px;
+  font-weight: 300;
+}
+#website .section3 .panel p {
+  position: absolute;
+  top: 47%;
+  left: 68%;
+  text-align: start;
+  font-size: 16px;
+  font-weight: 300;
+}
 
-#website .section3 .container:nth-child(3) .button button {
-  color: #680e93;
+#website .section3 .blue button {
+  border: 1px solid #0e2a93;
+  color: #0e2a93;
 }
-#website .section3 .container:nth-child(4) .button button {
-  color: #930e86;
+#website .section3 .blue h1,
+#website .section3 .blue p {
+  color: #0e2a93;
 }
-#website .section3 .container:last-child .button button {
-  color: #930e5e;
-}
-@media (max-width: 1250px) {
-  #website .section3 .container {
-    width: 94%;
-    border-radius: 82px;
-  }
-  #website .section3 .container .column1 .title_en {
-    font-size: 32px;
-  }
 
-  #website .section3 .container .column1 .article {
-    font-size: 18px;
-  }
-  #website .section3 .container .column1 .button {
-    width: 400px;
-    margin-top: 6%;
-  }
-  #website .section3 .container .column1 .button button {
-    padding: 2% 8%;
-    font-size: 18px;
-    margin-right: 8%;
-  }
+#website .section3 .purple button {
+  border: 1px solid #410e93;
+  color: #410e93;
 }
-@media (max-width: 965px) {
-  #website .section3 .container {
-    width: 96%;
-    border-radius: 85px;
-  }
-  #website .section3 .container .column1 .title_en {
-    font-size: 28px;
-  }
-  #website .section3 .container .column1 .title_ko {
-    display: none;
-  }
-  #website .section3 .container .column1 .article {
-    font-size: 14px;
-  }
-  #website .section3 .container .column1 .button {
-    width: 300px;
-    margin-top: 6%;
-  }
-  #website .section3 .container .column1 .button button {
-    padding: 2% 8%;
-    font-size: 14px;
-    margin-right: 8%;
-  }
+#website .section3 .purple h1,
+#website .section3 .purple p {
+  color: #410e93;
 }
-@media (max-width: 750px) {
-  #website .section3 .container .column1 .title_en {
-    font-size: 25px;
-    font-weight: 600;
-  }
 
-  #website .section3 .container .column1 .article {
-    display: none;
-  }
-  #website .section3 .container .column1 .button button {
-    width: 100px;
-    display: flex;
-    font-size: 12px;
-    padding: 2px 3px;
-    margin-right: 5px;
-    justify-content: center;
-  }
-  #website .section3 .container .column2 {
-    width: 40%;
-  }
-  #website .section3 .container .column2 img {
-    top: -250px;
-  }
+#website .section3 .black button {
+  border: 1px solid #272628;
+  color: #272628;
+}
+#website .section3 .black h1,
+#website .section3 .black p {
+  color: #272628;
+}
+
+#website .section3 .gray button {
+  border: 1px solid #676767;
+  color: #676767;
+}
+#website .section3 .gray h1,
+#website .section3 .gray p {
+  color: #676767;
+}
+
+#website .section3 .beige button {
+  border: 1px solid #ae9979;
+  color: #958163;
+}
+#website .section3 .beige h1,
+#website .section3 .beige p {
+  color: #958163;
+}
+/* website section2 */
+#website .section3 .section2 {
+  color: #0e2a93;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+#website .section3 .section2 .contents {
+  font-size: 4vw;
+}
+#website .seciton3 .section2 .contents em {
+  font-weight: 500;
+}
+#website .section3 .section2 desc {
+  display: flex;
+  margin-right: 10px;
+  font-size: 3vw;
+  margin-top: 2%;
+  width: 80%;
+  justify-content: center;
+}
+#website .section3 .section2 desc em {
+  margin-right: 4%;
+  position: relative;
+  z-index: 1;
+}
+#website .section3 .section2 desc em::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background: rgb(180, 180, 255, 0.7);
+  border-radius: 30px;
+  transition: all 0.3s;
+  z-index: -1;
+}
+#website .section3 .section2 desc em:hover::before {
+  height: 60px;
+}
+
+#website .section3 .section2 img {
+  width: 500px;
+  margin-top: 70px;
 }

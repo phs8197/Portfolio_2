@@ -204,7 +204,7 @@ Splitting();
 
 // Individual section scroll progress
 
-gsap.utils.toArray(".panel").forEach((section, index) => {
+gsap.utils.toArray("#wrap .panel").forEach((section, index) => {
   gsap.to(this, {
     scrollTrigger: {
       trigger: section,
@@ -247,3 +247,20 @@ function refresh() {
 }
 
 window.addEventListener("resize", refresh);
+
+// 가로 스크롤
+gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray("#website .section3 .panel");
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#website .container",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    end: () => "+=" + document.querySelector("#website .container").offsetWidth,
+  },
+});

@@ -100,7 +100,7 @@ html {
   -ms-overflow-style: none;
 }
 body {
-  min-height: 100%;
+  height: 100vh !important;
 }
 /* 공백 초기화 */
 body,
