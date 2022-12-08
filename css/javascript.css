@@ -1,7 +1,7 @@
 #javascript {
   background-color: #fffbef;
   padding-bottom: 6vw;
-  overflow: auto;
+  overflow: visible;
 }
 #javascript .section1 {
   background-color: #f4ed6b;
