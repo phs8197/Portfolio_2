@@ -1124,12 +1124,12 @@ body .particletext.confetti > .particle.c2 {
   height: 110%;
 }
 #javascript .section3 #wrap .panel:nth-child(2) .thumb .inner {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 450px;
 }
 #javascript .section3 #wrap .panel:nth-child(2) .thumb {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 450px;
 }
 #javascript .section3 #wrap .panel:nth-child(2) .thumb .inner img {
   height: 100%;
