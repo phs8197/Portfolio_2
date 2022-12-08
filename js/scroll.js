@@ -209,6 +209,13 @@ let frames = [
   "https://phs8197.github.io/Javascript-note/",
 ];
 
+let frames2 = [
+  "https://github.com/phs8197/MemoryCard-Game",
+  "https://github.com/phs8197/JS-Drawingboard",
+  "https://github.com/phs8197/TypingSpeed-game",
+  "https://github.com/phs8197/JS-roomtour",
+  "https://github.com/phs8197/Javascript-note",
+];
 // Load iFrames on demand & remove after modal is closed to reduce weight & smooth out transitions
 
 let cards = document.getElementsByClassName("inner");
@@ -229,25 +236,11 @@ for (let i = 0; i < cards.length; i++) {
     function (i) {
       javascriptPage.classList.add("active");
       iframe.setAttribute("src", frames[i]);
-      let penDebug = frames[i];
+      let penDebug = frames2[i];
       let penFull = penDebug.replace("debug", "pen");
       penLink.setAttribute("href", penFull);
     }.bind(null, i)
   );
-}
-
-// hover events for social links
-
-for (link of links) {
-  link.addEventListener("mouseover", function (event) {
-    cursor.classList.add("linkhover");
-  });
-  link.addEventListener("mousemove", function (event) {
-    cursor.classList.add("linkhover");
-  });
-  link.addEventListener("mouseout", function (event) {
-    cursor.classList.remove("linkhover");
-  });
 }
 
 // Escape key option to exit active state

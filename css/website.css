@@ -195,7 +195,9 @@ body .particletext.confetti > .particle.c2 {
 #website .section3 .gray p {
   color: #676767;
 }
-
+#website .section3 .gray p {
+  color: #434343;
+}
 #website .section3 .beige a {
   border: 1px solid #ae9979;
   color: #958163;
@@ -206,6 +208,9 @@ body .particletext.confetti > .particle.c2 {
 #website .section3 .beige h1,
 #website .section3 .beige p {
   color: #958163;
+}
+#website .section3 .beige p {
+  color: #62543f;
 }
 /* website section2 */
 #website .section3 .section2 {
