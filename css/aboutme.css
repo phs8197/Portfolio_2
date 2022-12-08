@@ -1,5 +1,6 @@
 #aboutme {
   background-color: #ffcecf;
+  overflow: auto;
 }
 #aboutme .section2 {
   position: relative;
