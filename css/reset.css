@@ -101,6 +101,7 @@ html {
 }
 body {
   height: 100vh !important;
+  -webkit-overflow-scrolling: touch;
 }
 /* 공백 초기화 */
 body,
