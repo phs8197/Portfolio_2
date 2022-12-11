@@ -99,10 +99,10 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
-  overflow: visible;
 }
 body {
   height: 100vh !important;
+  overflow: visible;
 }
 /* 공백 초기화 */
 body,
