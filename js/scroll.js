@@ -202,19 +202,17 @@ let penLink = document.getElementById("penlink");
 let links = document.getElementsByTagName("a");
 
 let frames = [
-  "https://phs8197.github.io/MemoryCard-Game/",
-  "https://phs8197.github.io/JS-Drawingboard/",
-  "https://phs8197.github.io/TypingSpeed-game/",
+  "https://phs8197.github.io/CSS-LocalguideApp/",
   "https://phs8197.github.io/JS-roomtour/",
-  "https://phs8197.github.io/Javascript-note/",
+  "https://phs8197.github.io/JS-Drawingboard/",
+  "https://phs8197.github.io/MemoryCard-Game/",
 ];
 
 let frames2 = [
-  "https://github.com/phs8197/MemoryCard-Game",
-  "https://github.com/phs8197/JS-Drawingboard",
-  "https://github.com/phs8197/TypingSpeed-game",
+  "https://github.com/phs8197/CSS-LocalguideApp",
   "https://github.com/phs8197/JS-roomtour",
-  "https://github.com/phs8197/Javascript-note",
+  "https://github.com/phs8197/JS-Drawingboard",
+  "https://github.com/phs8197/MemoryCard-Game",
 ];
 // Load iFrames on demand & remove after modal is closed to reduce weight & smooth out transitions
 

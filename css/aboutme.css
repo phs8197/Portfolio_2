@@ -156,6 +156,7 @@
 }
 #aboutme .section3 .box_container .box1,
 #aboutme .section3 .box_container .box2,
+#aboutme .section3 .box_container .box3,
 #aboutme .section3 .box_container .box4,
 #aboutme .section3 .box_container .box5 {
   width: 10vw;
@@ -177,16 +178,13 @@
 }
 #aboutme .section3 .box_container .box1:hover,
 #aboutme .section3 .box_container .box2:hover,
+#aboutme .section3 .box_container .box3:hover,
 #aboutme .section3 .box_container .box4:hover,
 #aboutme .section3 .box_container .box5:hover {
   width: 32vw;
   border-radius: 900px;
 }
-#aboutme .section3 .box_container .box3 {
-  background: url(../image/1000.JPG);
-  background-position: center;
-  background-size: cover;
-}
+
 #aboutme .section3 .box_container .box1 {
   background: url(../image/IMG_6416.JPG);
   background-position: center;
@@ -198,7 +196,7 @@
   background-size: cover;
 }
 #aboutme .section3 .box_container .box3 {
-  background: url(../image/1000.JPG);
+  background: url(../image/IMG_5020.jpeg);
   background-position: center;
   background-size: cover;
 }

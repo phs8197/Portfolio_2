@@ -81,17 +81,3 @@ const imageBox5 = document.querySelector(
 const imageBox3 = document.querySelector(
   "#aboutme .section3 .box_container .box3"
 );
-
-function hoverBox(event) {
-  imageBox3.classList.remove("wide");
-  imageBox3.classList.add("narrow");
-}
-function hoverBox3(event) {
-  imageBox3.classList.remove("narrow");
-  imageBox3.classList.add("wide");
-}
-imageBox1.addEventListener("mouseover", hoverBox);
-imageBox2.addEventListener("mouseover", hoverBox);
-imageBox4.addEventListener("mouseover", hoverBox);
-imageBox5.addEventListener("mouseover", hoverBox);
-imageBox3.addEventListener("mouseover", hoverBox3);

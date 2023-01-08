@@ -87,7 +87,7 @@ body .particletext.confetti > .particle.c2 {
   background: #e8ecfb;
 }
 #website .container {
-  width: 600% !important;
+  width: 500% !important;
   height: 100vh !important;
   display: flex;
   flex-wrap: nowrap;
